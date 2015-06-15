@@ -1,0 +1,13 @@
+
+{% extends "DjemaulsBlogBundle::layout.html.twig" %}
+    {% block DjemaulsBlog_body %}
+        <h1>MODIFICATION ARTICLE </h1>
+       Id      : {{ article.id }} <br>
+       Titre   : {{ article.titre }} <br>
+       Auteur  : {{ article.auteur }} <br>
+       Contenu : {{ article.contenu }} <br>  
+
+            {% include "DjemaulsBlogBundle:Blog:formulaire.html.twig" %}
+
+     
+{% endblock %}

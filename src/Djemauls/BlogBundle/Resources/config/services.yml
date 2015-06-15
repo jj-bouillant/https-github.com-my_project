@@ -1,0 +1,4 @@
+services:
+#    djemauls_blog.example:
+#        class: Djemauls\BlogBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,54 @@
+body{background-color: #fff;}
+body{
+	  background-color: rgb(0,0,255);
+	  width: 960px;
+	  margin: auto;
+	}
+	
+	p{
+		color: white;
+		/*color: blue !important;*/
+		/*color: white !important;*/
+	}
+	a{
+		color: red;
+		/*color: blue !important;*/
+		/*color: white !important;*/
+	}
+	li{
+		color: yellow;
+		/*color: blue !important;*/
+		/*color: white !important;*/
+	}
+	p.rouge{
+		color: red;
+	}
+
+	input[type=submit] {
+		background: yellow;
+	}
+	#titre{
+		color: lime;
+	}
+	h1#titre{
+		color: green;
+	}
+	input{
+		color: black .gras;
+	}
+	a:hover{
+		background-color: red;
+	}
+	li:hover{
+		background-color: yellow;
+	}
+	<p> Lorem ipsum dolor</p>
+	article > h1 {
+		background-color: white
+	}
+	p + p{
+
+	}
+	body > #titre .gras{
+
+	}

@@ -1,0 +1,10 @@
+{% extends "DjemaulsBlogBundle::layout.html.twig" %}
+   {% block DjemaulsBlog_body %}
+      <h1>Liste des Articles</h1>
+	<ul>
+	<li>"Ref - Titre                      - Auteur     - Contenu                         - Image"</li> 
+    	{% for article in lart %}
+        <li>{{ article.id|e }} - {{ article.titre|e }}- {{ article.auteur|e }} - {{ article.contenu|e }} </li> 
+   	 	{% endfor %}
+	</ul>
+   {% endblock %}

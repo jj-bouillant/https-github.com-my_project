@@ -1,0 +1,20 @@
+{% extends "DjemaulsBlogBundle::layout.html.twig" %}
+    {% block DjemaulsBlog_body %}
+       <h1>CONSULTATION ARTICLE </h1>
+       <p>Id article.....: {{ article.id }} </p>
+       <p>Titre article..: {{ article.titre }} </p>
+       <p>Auteur article.: {{ article.auteur }} </p>
+       <p>Contenu article: {{ article.contenu }} </p> 
+       
+       {% if article.image.url|default %}
+       <img src="{{asset('images/') }}{{ article.image.url }}" alt="{{asset('images/') }}{{ article.image.url }}" width="100" height="70" /> <br> 
+       {% endif %}
+       <br> <li>Commentaires:<br></li>
+       {% for commentaire in article.commentaires %}
+          <p> {{ commentaire.id }} - {{ commentaire.auteur }} - {{ commentaire.contenu }} </p> 
+       {% endfor %}
+       <br> <li>Catégories:</li>
+       {% for categorie in article.categories %}
+           <p> {{ categorie.id }} - {{ categorie.nom }} </p> 
+       {% endfor %}
+    {% endblock %}

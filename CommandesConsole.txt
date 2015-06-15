@@ -1,0 +1,67 @@
+Aller dans un repertoire :
+cd nomRepertoire
+
+revenir au repertoire parent :
+cd ..
+
+revenir a la racine :
+cd /
+
+revenir au repertoire utilisateur :
+cd ~
+
+lister le contenu d'un repertoire :
+ls (dir sous windows)
+
+Acces console :
+php app/console
+
+Vider le cache dev :
+php app/console cache:clear
+
+Vider le cache prod :
+php app/console cache:clear —-env=prod
+
+
+
+
+
+Création Bundle :
+php app/console generate:bundle
+
+
+
+
+
+
+
+Création entité :
+php app/console doctrine:generate:entity
+
+Mise à jour entité :
+!! Toutes les entités d'un meme bundle doivent
+ avoir le meme type de mapping (si != d'annotation création d'un repertoire dans config du bundle)!!
+php app/console doctrine:generate:entities nomBundle:Entity
+
+Création BDD :
+php app/console doctrine:database:create
+
+Test création table : 
+php app/console doctrine:schema:update --dump-sql
+
+Création table :
+php app/console doctrine:schema:update --force
+
+Formulaire :
+php app/console doctrine:generate:form  nomBundle:Entity
+
+!! Choisir yml pour obtenir les routes !!
+!! Modifier le formType si entité liée !!
+Formulaires crud :
+php app/console doctrine:generate:crud  nomBundle:Entity
+
+FOSUserBundle, création :
+php app/console fos:user:create
+
+Assetic
+php app/console assetic:dump --env=prod

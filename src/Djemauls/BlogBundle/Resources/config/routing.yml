@@ -1,0 +1,39 @@
+djemauls_blog_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: DjemaulsBlogBundle:Default:index }
+
+djemauls_blog_acceuil:
+    path:     /
+    defaults: { _controller: DjemaulsBlogBundle:Blog:index }
+    requirements:
+# Pour accepter un nombre entier et pouvoir l'incrémenter
+        page: \d+
+
+djemauls_blog_voir:
+    path:     /article/{id}
+    defaults: { _controller: DjemaulsBlogBundle:Blog:voir }
+    requirements:
+# Pour accepter un caractère en plus
+        id: \d+
+
+djemauls_blog_ajouter:
+    path:    /ajouter/{ref}
+    defaults: { _controller: DjemaulsBlogBundle:Blog:ajouter }
+    requirements:
+# 
+        art: \d+
+
+djemauls_blog_modifier:
+    path:    /modifier/{art}
+    defaults: { _controller: DjemaulsBlogBundle:Blog:modifier }
+    requirements:
+# 
+        art: \d+
+
+
+#djemauls_blog_Gestion:
+#    path:    /gestion/{art}
+#    defaults: { _controller: DjemaulsBlogBundle:Blog:modifier }
+#    requirements:
+# 
+#        art: \d+
